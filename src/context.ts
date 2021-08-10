@@ -24,6 +24,7 @@ export interface Inputs {
   use: boolean;
   endpoint: string;
   config: string;
+  builderName: string;
 }
 
 export async function getInputs(): Promise<Inputs> {
@@ -35,7 +36,8 @@ export async function getInputs(): Promise<Inputs> {
     install: core.getBooleanInput('install'),
     use: core.getBooleanInput('use'),
     endpoint: core.getInput('endpoint'),
-    config: core.getInput('config')
+    config: core.getInput('config'),
+    builderName: core.getInput('builder-name')
   };
 }
 
